@@ -1,6 +1,7 @@
 package com.wtgroup.abtable.utils;
 
 import com.wtgroup.abtable.ABTables;
+import com.wtgroup.abtable.constant.JobDataMapKeys;
 import com.wtgroup.abtable.job.ABTableJob;
 import com.wtgroup.abtable.job.PersistABTableJob;
 import com.wtgroup.abtable.job.SyncJob;
@@ -28,9 +29,13 @@ public class QuartzUtil {
      * @param jobName     任务名
      * @param triggerName 触发器名
      * @param switcher    执行任务的类
+     * @param abTables
+     * @param abTableJDBCUtilBean
      * @throws SchedulerException
      */
-    public static Scheduler buildQuartzSched(String jobName, String triggerName, Switcher switcher, String cron)
+    public static Scheduler buildQuartzSched(String jobName, String triggerName,
+                                             Switcher switcher, String cron,
+                                             ABTables abTables, ABTableJDBCUtilBean abTableJDBCUtilBean)
             throws SchedulerException {
         /*
         * Switcher 支持 Job 的 两个注解.
@@ -47,8 +52,9 @@ public class QuartzUtil {
         JobDetail jobDetail = JobBuilder.newJob(jobClass)
                 .withIdentity(jobName, JOB_GROUP_NAME)
                 .build();
-        jobDetail.getJobDataMap().put("switcher", switcher);
-//        jobDetail.getJobDataMap().put("abTables", abTables);
+        jobDetail.getJobDataMap().put(JobDataMapKeys.switcher, switcher);
+        jobDetail.getJobDataMap().put(JobDataMapKeys.abtables, abTables);
+        jobDetail.getJobDataMap().put(JobDataMapKeys.abtablejdbcutilbean, abTableJDBCUtilBean);
         // 构建一个触发器，规定触发的规则
 //        Trigger trigger = TriggerBuilder.newTrigger()// 创建一个新的TriggerBuilder来规范一个触发器
 //                .withIdentity(triggerName, TRIGGER_GROUP_NAME)// 给触发器起一个名字和组名

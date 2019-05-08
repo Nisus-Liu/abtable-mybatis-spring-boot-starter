@@ -39,7 +39,9 @@ public class ABTableSchedulerImpl implements ABTableScheduler {
     private static final String JOB_NAME = "ABTABLE_QUARTZ_JOB";
     private static final String TRIGGER_NAME = "ABTABLE_QUARTZ_TRIGGER";
 
-    public ABTableSchedulerImpl(List<String> crons, Switcher switcher) {
+    public ABTableSchedulerImpl(List<String> crons, Switcher switcher,
+                                ABTables abTables,
+                                ABTableJDBCUtilBean abTableJDBCUtilBean) {
 
         for (int i = 0; i < crons.size(); i++) {
             String cron = crons.get(i);
@@ -48,7 +50,10 @@ public class ABTableSchedulerImpl implements ABTableScheduler {
                         JOB_NAME + "-" + i,
                         TRIGGER_NAME + "-" + i,
                         switcher,
-                        cron);
+                        cron,
+                        abTables,
+                        abTableJDBCUtilBean
+                        );
                 quartzSchedulerList.add(scheduler);
             } catch (SchedulerException e) {
                 throw new RuntimeException("定时任务创建失败: " + cron, e);

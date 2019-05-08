@@ -1,12 +1,12 @@
 package com.wtgroup.abtable.demo.schedule;
 
+import com.wtgroup.abtable.ABTables;
+import com.wtgroup.abtable.entity.ABTableMeta;
 import com.wtgroup.abtable.schedule.Switcher;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.PersistJobDataAfterExecution;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Nisus Liu
@@ -24,7 +24,7 @@ public class CustomerSwitcher implements Switcher {
     }
 
     @Override
-    public void switching() throws Exception {
+    public void switching(ABTables abTables, List<ABTableMeta> abTableMetaList) throws Exception {
         System.out.println("my switcher execute ...");
         System.out.println("last switch: "+ lastSwitch);
         lastSwitch = new Date();

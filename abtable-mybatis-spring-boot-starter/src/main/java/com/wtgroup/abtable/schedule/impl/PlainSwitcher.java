@@ -43,16 +43,16 @@ public class PlainSwitcher implements Switcher {
         * */
 
     @Override
-    public void switching() throws Exception {
+    public void switching(ABTables abTables, List<ABTableMeta> abTableMetaList) throws Exception {
         log.info("start switching");
 //        JobDataMap jobDataMap = jec.getJobDetail().getJobDataMap();
 //        ABTableJDBCUtilBean jdbcUtil = (ABTableJDBCUtilBean) jobDataMap.get("JDBCUtil");
 //        ABTables abTables = (ABTables) jobDataMap.get("abTables");
 
-        List<ABTableMeta> abTableMetaList = abTableJDBCUtilBean.getABTableMetaList(abTables.keySet());
+//        List<ABTableMeta> abTableMetaList = abTableJDBCUtilBean.getABTableMetaList(this.abTables.keySet());
         if (abTableMetaList.size()>0) {
             for (ABTableMeta meta : abTableMetaList) {
-                ABTables.ABTable abTable = abTables.get(meta.getPure());
+                ABTables.ABTable abTable = this.abTables.get(meta.getPure());
 
                 // 当前最新的表
                 String abLabel = meta.getAb();

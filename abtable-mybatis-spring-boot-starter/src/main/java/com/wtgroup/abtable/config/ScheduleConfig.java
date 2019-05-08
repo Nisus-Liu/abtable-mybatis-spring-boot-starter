@@ -82,7 +82,10 @@ public class ScheduleConfig {
     //@PostConstruct
     @Bean
     @ConditionalOnMissingBean
-    public ABTableScheduler defScheduler(Switcher switcher) {
+    public ABTableScheduler defScheduler(Switcher switcher,
+                                         ABTables abTables,
+                             ABTableJDBCUtilBean abTableJDBCUtilBean) {
+
         if (crons == null) {
             log.warn("'crons' is null, will not config ABTableScheduler, please config it by yourself");
             return null;
@@ -125,7 +128,7 @@ public class ScheduleConfig {
 
             if (crons!=null && !crons.isEmpty()) {
                 defScheduler = new ABTableSchedulerImpl(
-                        crons, switcher);
+                        crons, switcher, abTables, abTableJDBCUtilBean);
             }
 
 //        }else{

@@ -1,6 +1,9 @@
 package com.wtgroup.abtable.schedule;
 
-import org.quartz.Job;
+import com.wtgroup.abtable.ABTables;
+import com.wtgroup.abtable.entity.ABTableMeta;
+
+import java.util.List;
 
 /**无状态bean, 有无参构造
  *
@@ -12,6 +15,6 @@ import org.quartz.Job;
  */
 public interface Switcher /*extends Job*/ {
 
-    public void switching() throws Exception;
+    public void switching(ABTables abTables, List<ABTableMeta> abTableMetaList) throws Exception;
 
 }
