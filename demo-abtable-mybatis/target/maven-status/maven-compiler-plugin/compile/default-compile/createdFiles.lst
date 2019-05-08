@@ -1,0 +1,4 @@
+com\wtgroup\abtable\demo\DemoABTableApplication.class
+com\wtgroup\abtable\demo\entity\TestABTable.class
+com\wtgroup\abtable\demo\mapper\TestABTableMapper.class
+com\wtgroup\abtable\demo\schedule\CustomerSwitcher.class
