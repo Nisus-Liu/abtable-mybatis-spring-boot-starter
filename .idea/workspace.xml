@@ -4,7 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/abtable-mybatis-spring-boot-starter/src/main/java/com/wtgroup/abtable/config/ScheduleConfig.java" line="70" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ef23d5a-4d9a-4620-8499-3009c0f70e0e" name="Default Changelist" comment="" />
+    <list default="true" id="3ef23d5a-4d9a-4620-8499-3009c0f70e0e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/demo-abtable-mybatis/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/abtable-mybatis-spring-boot-starter/target/" />
@@ -290,6 +292,9 @@
       <find>com.jfai.afs.demo.abtable.DemoABTableApplication</find>
       <find>mybatis</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -606,6 +611,9 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -801,7 +809,7 @@
     <property name="SearchEverywhereHistoryKey" value="schedulerth&#9;PSI&#9;JAVA://org.quartz.core.QuartzSchedulerThread" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557305633982" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557305764830" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JiuFu/AntiFraudAPI/Code/anti_fraud_service" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Developer/nodejs/node" />
@@ -948,12 +956,12 @@
       <workItem from="1556791879543" duration="547000" />
       <workItem from="1556792640313" duration="1920000" />
       <workItem from="1557126384513" duration="6940000" />
-      <workItem from="1557295176088" duration="8574000" />
+      <workItem from="1557295176088" duration="8916000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18850000" />
+    <option name="totallyTimeSpent" value="19192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -973,7 +981,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.42116404" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.42161018" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32910052" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
