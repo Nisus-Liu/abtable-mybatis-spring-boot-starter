@@ -53,8 +53,8 @@ public class QuartzUtil {
                 .withIdentity(jobName, JOB_GROUP_NAME)
                 .build();
         jobDetail.getJobDataMap().put(JobDataMapKeys.switcher, switcher);
-        jobDetail.getJobDataMap().put(JobDataMapKeys.abtables, abTables);
-        jobDetail.getJobDataMap().put(JobDataMapKeys.abtablejdbcutilbean, abTableJDBCUtilBean);
+        jobDetail.getJobDataMap().put(JobDataMapKeys.abTables, abTables);
+        jobDetail.getJobDataMap().put(JobDataMapKeys.abTableJDBCUtilBean, abTableJDBCUtilBean);
         // 构建一个触发器，规定触发的规则
 //        Trigger trigger = TriggerBuilder.newTrigger()// 创建一个新的TriggerBuilder来规范一个触发器
 //                .withIdentity(triggerName, TRIGGER_GROUP_NAME)// 给触发器起一个名字和组名

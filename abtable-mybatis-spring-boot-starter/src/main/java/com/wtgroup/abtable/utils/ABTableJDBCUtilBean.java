@@ -46,7 +46,7 @@ public class ABTableJDBCUtilBean {
         try {
             Class.forName(driverClassName);
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("加载数据库驱动失败");
+            throw new RuntimeException("加载数据库驱动失败",e);
         }
     }
 
@@ -54,7 +54,7 @@ public class ABTableJDBCUtilBean {
         try {
             return DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
-            throw new RuntimeException("建立数据库连接失败");
+            throw new RuntimeException("建立数据库连接失败",e);
         }
     }
 
@@ -66,7 +66,7 @@ public class ABTableJDBCUtilBean {
 
             if (connection != null) connection.close();
         } catch (SQLException e) {
-            throw new RuntimeException("建立数据库连接失败");
+            throw new RuntimeException("建立数据库连接失败",e);
         }
     }
 

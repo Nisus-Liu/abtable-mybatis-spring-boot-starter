@@ -2,12 +2,14 @@ package com.wtgroup.abtable.config;
 
 import com.wtgroup.abtable.ABTableMybatisInterceptor;
 import com.wtgroup.abtable.ABTables;
+import com.wtgroup.abtable.actuator.ABTableEndpoint;
 import com.wtgroup.abtable.schedule.ABTableScheduler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 import javax.annotation.PostConstruct;
 
@@ -19,7 +21,9 @@ import javax.annotation.PostConstruct;
  */
 @Configuration
 @EnableConfigurationProperties({ABTablesConfig.class,
-        DataSourceConfig.class,MetaTableConfig.class,ScheduleConfig.class})
+        DataSourceConfig.class,MetaTableConfig.class,ScheduleConfig.class,
+        /*ABTableEndpoint.class*/})
+@Import(ABTableEndpoint.class)
 public class ABTableAutoConfiguration {
 
 

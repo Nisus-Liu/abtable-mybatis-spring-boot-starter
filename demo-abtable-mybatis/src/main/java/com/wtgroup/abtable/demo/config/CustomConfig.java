@@ -1,8 +1,6 @@
 package com.wtgroup.abtable.demo.config;
 
-import com.wtgroup.abtable.schedule.ABTableScheduler;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 
 /**
  * @author Nisus Liu

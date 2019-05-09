@@ -23,6 +23,7 @@ import java.util.List;
 public class ABTablesConfig {
     private List<String> pureNameList;
     private List<String> abfixList;
+    private boolean actuator;
 //    /**
 //     * 配置信息是 replace into 元数据表;
 //     * 还是 insert ignore.

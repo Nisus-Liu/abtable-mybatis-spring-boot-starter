@@ -215,8 +215,26 @@ public class CustomerSwitcher implements Switcher {
 
 
 
+## 监控管理
+启动器内置有Springboot的`Endpoint`.
+`application.properties`中配置:
+```
+management.endpoints.web.exposure.include=abtable
+```
 
-
+1. 查看当前所有AB表状态信息(`ABTables`):
+```
+GET http://localhost:8080/actuator/abtable/_all
+```
+2. 查看指定`pure`的状态信息:
+```
+GET http://localhost:8080/actuator/abtable/example_1
+```
+3. 手动切换
+如: 将`example_1`切换到`B`表
+```
+POST http://localhost:8080/actuator/abtable/switch/example_1/b
+```
 
 
 
